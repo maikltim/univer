@@ -161,6 +161,10 @@ DB - PostgreSQL
 Monitoring - prometheus grafana
 Log - OpenSearch
 
+Архитектура Системы:
+
+Трехуровневая клиент-серверная архитектура
+
 
 ```
 
