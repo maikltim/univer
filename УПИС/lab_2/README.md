@@ -147,8 +147,11 @@
 
 ## сведения о затратах на ресурсы и задачи
 
+![alt text](images/5_.png)
 
+![alt text](images/4_.png)
 
+![alt text](images/6_.png)
 
 
 
