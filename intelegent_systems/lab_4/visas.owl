@@ -1,0 +1,25 @@
+@prefix : <http://www.example.org/visas#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:ФизическоеЛицо rdf:type owl:Class .
+:ВизовыйЦентр rdf:type owl:Class .
+:ТипВизы rdf:type owl:Class .
+:Туристическая rdf:type owl:Class ; rdfs:subClassOf :ТипВизы .
+:Гостевая rdf:type owl:Class ; rdfs:subClassOf :ТипВизы .
+:Бизнес rdf:type owl:Class ; rdfs:subClassOf :ТипВизы .
+
+:Документ rdf:type owl:Class .
+:Паспорт rdf:type owl:Class ; rdfs:subClassOf :Документ .
+:Анкета rdf:type owl:Class ; rdfs:subClassOf :Документ .
+:Фотография rdf:type owl:Class ; rdfs:subClassOf :Документ .
+:ФинансовыеГарантии rdf:type owl:Class ; rdfs:subClassOf :Документ .
+
+:обращаетсяВ rdf:type owl:ObjectProperty ; rdfs:domain :ФизическоеЛицо ; rdfs:range :ВизовыйЦентр .
+:запрашиваетВизу rdf:type owl:ObjectProperty ; rdfs:domain :ФизическоеЛицо ; rdfs:range :ТипВизы .
+:требуетДокументы rdf:type owl:ObjectProperty ; rdfs:domain :ТипВизы ; rdfs:range :Документ .
+
+:датаПодачи rdf:type owl:DatatypeProperty ; rdfs:domain :ФизическоеЛицо ; rdfs:range xsd:dateTime .
+:номерПаспорта rdf:type owl:DatatypeProperty ; rdfs:domain :ФизическоеЛицо ; rdfs:range xsd:string .

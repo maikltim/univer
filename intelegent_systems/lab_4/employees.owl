@@ -1,0 +1,25 @@
+@prefix : <http://www.example.org/employees#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Организация rdf:type owl:Class .
+:Подразделение rdf:type owl:Class ; rdfs:subClassOf :Организация .
+:Сотрудник rdf:type owl:Class .
+
+:Должность rdf:type owl:Class .
+:Руководитель rdf:type owl:Class ; rdfs:subClassOf :Должность .
+:Специалист rdf:type owl:Class ; rdfs:subClassOf :Должность .
+:Стажёр rdf:type owl:Class ; rdfs:subClassOf :Должность .
+
+:Зарплата rdf:type owl:Class .
+:Оклад rdf:type owl:Class ; rdfs:subClassOf :Зарплата .
+:Бонусы rdf:type owl:Class ; rdfs:subClassOf :Зарплата .
+
+:работаетВ rdf:type owl:ObjectProperty ; rdfs:domain :Сотрудник ; rdfs:range :Подразделение .
+:занимаетДолжность rdf:type owl:ObjectProperty ; rdfs:domain :Сотрудник ; rdfs:range :Должность .
+:получаетЗарплату rdf:type owl:ObjectProperty ; rdfs:domain :Сотрудник ; rdfs:range :Зарплата .
+
+:имеетОклад rdf:type owl:DatatypeProperty ; rdfs:domain :Зарплата ; rdfs:range xsd:decimal .
+:имеетБонус rdf:type owl:DatatypeProperty ; rdfs:domain :Зарплата ; rdfs:range xsd:decimal .
