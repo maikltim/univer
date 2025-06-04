@@ -1,0 +1,19 @@
+<!DOCTYPE store [
+    <!ELEMENT store (products, clients, transactions)>
+    <!ELEMENT products (product+)>
+    <!ELEMENT product (name, price, stock)>
+    <!ATTLIST product id ID #REQUIRED category (Laptop|Desktop|Monitor|Peripheral) #REQUIRED>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+    <!ELEMENT stock (#PCDATA)>
+    <!ELEMENT clients (client+)>
+    <!ELEMENT client (name, email)>
+    <!ATTLIST client id ID #REQUIRED>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT transactions (transaction+)>
+    <!ELEMENT transaction (productRef+, total)>
+    <!ATTLIST transaction id ID #REQUIRED clientId IDREF #REQUIRED date CDATA #REQUIRED>
+    <!ELEMENT productRef EMPTY>
+    <!ATTLIST productRef id IDREF #REQUIRED quantity CDATA #REQUIRED>
+    <!ELEMENT total (#PCDATA)>
+]>

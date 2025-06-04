@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<store>
+    <products>
+        <product id="p1" category="Laptop">
+            <name>Lenovo ThinkPad X1</name>
+            <price>1200</price>
+            <stock>10</stock>
+        </product>
+        <product id="p2" category="Desktop">
+            <name>Dell OptiPlex 7070</name>
+            <price>800</price>
+            <stock>5</stock>
+        </product>
+        <product id="p3" category="Monitor">
+            <name>Samsung 27" Curved</name>
+            <price>300</price>
+            <stock>15</stock>
+        </product>
+    </products>
+    <clients>
+        <client id="c1">
+            <name>Иван Иванов</name>
+            <email>ivanov@example.com</email>
+        </client>
+        <client id="c2">
+            <name>ТехКорп</name>
+            <email>contact@techcorp.com</email>
+        </client>
+    </clients>
+    <transactions>
+        <transaction id="t1" clientId="c1" date="2025-05-01">
+            <productRef id="p1" quantity="1"/>
+            <total>1200</total>
+        </transaction>
+        <transaction id="t2" clientId="c2" date="2025-05-02">
+            <productRef id="p2" quantity="2"/>
+            <total>1600</total>
+        </transaction>
+    </transactions>
+</store>

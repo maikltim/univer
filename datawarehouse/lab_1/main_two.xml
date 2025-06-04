@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/store">
+        <computerStore>
+            <xsl:apply-templates select="products"/>
+        </computerStore>
+    </xsl:template>
+    
+    <xsl:template match="products">
+        <items>
+            <xsl:for-each select="product[@category='Laptop']">
+                <xsl:sort select="price" data-type="number" order="descending"/>
+                <item>
+                    <itemId><xsl:value-of select="@id"/></itemId>
+                    <categoryElement><xsl:value-of select="@category"/></categoryElement>
+                    <xsl:copy-of select="name"/>
+                    <xsl:copy-of select="price"/>
+                    <xsl:copy-of select="stock"/>
+                    <childCount><xsl:value-of select="count(*)"/></childCount>
+                </item>
+            </xsl:for-each>
+            <secondProduct>
+                <xsl:copy-of select="product[2]"/>
+            </secondProduct>
+        </items>
+    </xsl:template>
+</xsl:stylesheet>

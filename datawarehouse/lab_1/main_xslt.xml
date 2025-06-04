@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="products.xsl"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="/store">
+        <html>
+            <body>
+                <h2>Ассортимент компьютерной техники</h2>
+                <table border="1">
+                    <tr>
+                        <th>ID</th>
+                        <th>Название</th>
+                        <th>Категория</th>
+                        <th>Цена</th>
+                        <th>На складе</th>
+                    </tr>
+                    <xsl:apply-templates select="products/product"/>
+                </table>
+            </body>
+        </html>
+    </xsl:template>
+    <xsl:template match="product">
+        <tr>
+            <td><xsl:value-of select="@id"/></td>
+            <td><xsl:value-of select="name"/></td>
+            <td><xsl:value-of select="@category"/></td>
+            <td><xsl:value-of select="price"/></td>
+            <td><xsl:value-of select="stock"/></td>
+        </tr>
+    </xsl:template>
+</xsl:stylesheet>
