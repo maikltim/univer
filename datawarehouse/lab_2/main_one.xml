@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HardwareStore>
+    <Products>
+        <Product id="p1">
+            <Name>Intel Core i9-13900K</Name>
+            <Category>Процессор</Category>
+            <Price>599.99</Price>
+            <Stock>10</Stock>
+            <Brand>Intel</Brand>
+        </Product>
+        <Product id="p2">
+            <Name>NVIDIA RTX 4090</Name>
+            <Category>Видеокарта</Category>
+            <Price>1599.99</Price>
+            <Stock>5</Stock>
+            <Brand>NVIDIA</Brand>
+        </Product>
+        <Product id="p3">
+            <Name>ASUS ROG Strix Z790</Name>
+            <Category>Материнская плата</Category>
+            <Price>429.99</Price>
+            <Stock>8</Stock>
+            <Brand>ASUS</Brand>
+        </Product>
+    </Products>
+    <Clients>
+        <Client id="c1">
+            <Name>Иван Иванов</Name>
+            <Email>ivanov@example.com</Email>
+            <Phone>555-0123</Phone>
+        </Client>
+        <Client id="c2">
+            <Name>Анна Смирнова</Name>
+            <Email>smirnova@example.com</Email>
+            <Phone>555-0456</Phone>
+        </Client>
+    </Clients>
+    <Transactions>
+        <Transaction id="t1">
+            <ClientID>c1</ClientID>
+            <ProductID>p1</ProductID>
+            <Quantity>1</Quantity>
+            <Date>2025-06-01</Date>
+            <TotalAmount>599.99</TotalAmount>
+        </Transaction>
+        <Transaction id="t2">
+            <ClientID>c2</ClientID>
+            <ProductID>p2</ProductID>
+            <Quantity>1</Quantity>
+            <Date>2025-06-02</Date>
+            <TotalAmount>1599.99</TotalAmount>
+        </Transaction>
+    </Transactions>
+</HardwareStore>

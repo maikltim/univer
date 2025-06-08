@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output method="xml" indent="yes"/>
+    <xsl:template match="/HardwareStore">
+        <DataWarehouse>
+            <!-- Таблица фактов: SalesFacts -->
+            <SalesFacts>
+                <xsl:for-each select="Transactions/Transaction">
+                    <SaleFact>
+                        <SaleID><xsl:value-of select="@id"/></SaleID>
+                        <ClientKey><xsl:value-of select="ClientID"/></ClientKey>
+                        <ProductKey><xsl:value-of select="ProductID"/></ProductKey>
+                        <Quantity><xsl:value-of select="Quantity"/></Quantity>
+                        <TotalAmount><xsl:value-of select="TotalAmount"/></TotalAmount>
+                        <SaleDate><xsl:value-of select="Date"/></SaleDate>
+                        <!-- Добавление нулевых значений для недостающих полей -->
+                        <Discount>0.00</Discount>
+                    </SaleFact>
+                </xsl:for-each>
+            </SalesFacts>
+            <!-- Таблица измерений: Products -->
+            <ProductsDim>
+                <xsl:for-each select="Products/Product[not(Name = preceding::Product/Name)]">
+                    <ProductDim>
+                        <ProductKey><xsl:value-of select="@id"/></ProductKey>
+                        <ProductName><xsl:value-of select="Name"/></ProductName>
+                        <Category><xsl:value-of select="Category"/></Category>
+                        <Brand><xsl:value-of select="Brand"/></Brand>
+                        <Price><xsl:value-of select="Price"/></Price>
+                        <Stock><xsl:value-of select="Stock"/></Stock>
+                    </ProductDim>
+                </xsl:for-each>
+            </ProductsDim>
+            <!-- Таблица измерений: Clients -->
+            <ClientsDim>
+                <xsl:for-each select="Clients/Client[not(Name = preceding::Client/Name)]">
+                    <ClientDim>
+                        <ClientKey><xsl:value-of select="@id"/></ClientKey>
+                        <ClientName><xsl:value-of select="Name"/></ClientName>
+                        <Email><xsl:value-of select="Email"/></Email>
+                        <Phone><xsl:value-of select="Phone"/></Phone>
+                    </ClientDim>
+                </xsl:for-each>
+            </ClientsDim>
+        </DataWarehouse>
+    </xsl:template>
+</xsl:stylesheet>
