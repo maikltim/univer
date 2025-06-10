@@ -1,0 +1,62 @@
+<products>
+    <product>
+        <id>1</id>
+        <name>Ноутбук Lenovo IdeaPad</name>
+        <price>50000</price>
+        <category>Электроника</category>
+    </product>
+    <product>
+        <id>2</id>
+        <name>Смартфон Xiaomi Redmi</name>
+        <price>15000</price>
+        <category>Электроника</category>
+    </product>
+    <product>
+        <id>3</id>
+        <name>Планшет Samsung Galaxy</name>
+        <price>25000</price>
+        <category>Электроника</category>
+    </product>
+    <product>
+        <id>4</id>
+        <name>Монитор LG 24"</name>
+        <price>12000</price>
+        <category>Электроника</category>
+    </product>
+    <product>
+        <id>5</id>
+        <name>Клавиатура Logitech</name>
+        <price>3000</price>
+        <category>Аксессуары</category>
+    </product>
+    <product>
+        <id>6</id>
+        <name>Мышь Microsoft</name>
+        <price>1500</price>
+        <category>Аксессуары</category>
+    </product>
+    <product>
+        <id>7</id>
+        <name>Принтер HP LaserJet</name>
+        <price>20000</price>
+        <category>Офисная техника</category>
+    </product>
+    <product>
+        <id>8</id>
+        <name>Сканер Canon</name>
+        <price>8000</price>
+        <category>Офисная техника</category>
+    </product>
+    <product>
+        <id>9</id>
+        <name>Веб-камера Logitech</name>
+        <price>4000</price>
+        <category>Аксессуары</category>
+    </product>
+    <product>
+        <id>10</id>
+        <name>Наушники Sony</name>
+        <price>7000</price>
+        <category>Аксессуары</category>
+    </product>
+</products>
