@@ -1,0 +1,10 @@
+https://www.example.com
+https://www.python.org
+https://www.wikipedia.org
+https://pypi.org
+https://docs.python.org/3/
+https://realpython.com
+https://github.com
+https://stackoverflow.com
+https://www.mozilla.org
+https://www.openai.com
