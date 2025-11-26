@@ -26,11 +26,25 @@
 
 ```
 lab_2/
-│
-├── mpi_downloader_two.py # Основной скрипт MPI
-├── urls.txt # Список URL для обработки
-├── mpi_images/ # Папки с загруженными изображениями создаются автоматически
-└── README.md
+ tree -L 2
+.
+├── env
+│   ├── bin
+│   ├── include
+│   ├── lib
+│   ├── lib64 -> lib
+│   └── pyvenv.cfg
+├── images
+│   ├── 1.png
+│   └── 2.png
+├── mpi_downloader.py
+├── mpi_images
+│   ├── rank_1
+│   ├── rank_2
+│   └── rank_3
+├── README.md
+└── urls.txt
+
 ```
 
 
@@ -54,7 +68,7 @@ pip install mpi4py requests beautifulsoup4
 2. Запустим MPI-программу (например, 4 процесса):
 
 
-mpiexec -n 4 python mpi_downloader_two.py
+mpiexec -n 4 python mpi_downloader.py
 ```
 
 > Пример вывода программы
@@ -69,6 +83,9 @@ mpiexec -n 4 python mpi_downloader_two.py
 [MASTER] Summary: {'pages': 10, 'images_found': 119, 'images_dl': 118, 'errors': 3}
 
 ```
+![alt text](images/2.png)
+
+![alt text](images/1.png)
  
 ## Контрольные вопросы
 

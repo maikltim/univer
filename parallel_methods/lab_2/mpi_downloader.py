@@ -1,10 +1,3 @@
-# mpi_downloader.py
-"""
-MPI версия задания: master/worker динамическая раздача URL.
-Запуск: mpiexec -n <P> python mpi_downloader.py
-Требует: mpi4py, requests, beautifulsoup4
-"""
-
 import os
 import hashlib
 import time
