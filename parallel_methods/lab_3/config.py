@@ -1,0 +1,5 @@
+# config.py
+
+N_POINTS = 10_000_000
+THREADS_PER_BLOCK = 256
+RANDOM_SEED = 1
