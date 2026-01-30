@@ -42,7 +42,7 @@ class SignalSubsystem:
         signals = []
         dt = self.T / self.Kdiap
 
-        for k in range(self.Kkan):        # ← ИСПРАВЛЕНО
+        for k in range(self.Kkan):      
             channel = np.zeros_like(self.t)
 
             for d in range(self.Kdiap):
