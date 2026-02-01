@@ -1,4 +1,3 @@
-# main.py
 import matplotlib.pyplot as plt
 
 from config import *
